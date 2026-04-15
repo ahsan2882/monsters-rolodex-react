@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./App.css";
 import CardList from "./components/card-list/card-list.component";
 import { Monster } from "./models/monster.model";
+import SearchBox from "./components/search-box/searh-box.component";
 
 type AppState = {
   monsters: Monster[];
@@ -41,11 +42,11 @@ class App extends Component<{}, AppState> {
     );
     return (
       <div className="App">
-        <input
-          className="search-box"
-          type="search"
+        <h1 className="app-title">Monsters Rolodex</h1>
+        <SearchBox
+          customClassName="search-box"
           placeholder="Search monsters"
-          onChange={onSearchChange}
+          onChangeHandler={onSearchChange}
         />
         <CardList monsters={filteredMonsters} />
       </div>

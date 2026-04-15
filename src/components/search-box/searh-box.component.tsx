@@ -1,5 +1,5 @@
-import { Component } from "react";
-import "./search-box.styles.css";
+// import { Component } from "react";
+import './search-box.styles.css';
 
 interface SearchBoxProps {
   customClassName: string;
@@ -7,20 +7,24 @@ interface SearchBoxProps {
   onChangeHandler: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-class SearchBox extends Component<SearchBoxProps> {
-  render() {
-    const { customClassName, placeholder, onChangeHandler } = this.props;
-    return (
-      <>
-        <input
-          className={customClassName}
-          type="search"
-          placeholder={placeholder}
-          onChange={onChangeHandler}
-        />
-      </>
-    );
-  }
+export default function SearchBox({ customClassName, placeholder, onChangeHandler }: SearchBoxProps) {
+  return <input className={customClassName} type="search" placeholder={placeholder} onChange={onChangeHandler} />;
 }
 
-export default SearchBox;
+// class SearchBox extends Component<SearchBoxProps> {
+//   render() {
+//     const { customClassName, placeholder, onChangeHandler } = this.props;
+//     return (
+//       <>
+//         <input
+//           className={customClassName}
+//           type="search"
+//           placeholder={placeholder}
+//           onChange={onChangeHandler}
+//         />
+//       </>
+//     );
+//   }
+// }
+
+// export default SearchBox;

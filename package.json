@@ -1,7 +1,7 @@
 {
   "name": "monsters-rolodex-react",
   "version": "0.1.0",
-  "homepage": "http://www.ahsan-shahid.me/monsters-rolodex-react/",
+  "homepage": "https://ahsan2882.github.io/monsters-rolodex-react/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
